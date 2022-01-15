@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dobre oferty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                {%for element in header%}
+                    <th>
+                        {{element}}
+                    </th>
+                {%endfor%}
+            </tr>
+        </thead>
+        <tbody>
+            {%for oferta in oferty%}
+            <tr>
+                {%for element in oferta%}
+                    {%if element.__str__()[:3] == 'htt'%}
+
+                    <td><a href="{{element}}">link</a></td>
+                    {%else%}
+                     <td>{{element}}</td>
+                    {%endif%}
+                {%endfor%}
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</body>
+</html>
