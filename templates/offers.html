@@ -21,10 +21,9 @@
             <tr>
                 {%for element in oferta%}
                     {%if element.__str__()[:3] == 'htt'%}
-
-                    <td><a href="{{element}}">link</a></td>
+                        <td><a href="{{element}}">link</a></td>
                     {%else%}
-                     <td>{{element}}</td>
+                        <td>{{element}}</td>
                     {%endif%}
                 {%endfor%}
             </tr>
